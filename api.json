@@ -1,0 +1,40 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "SlackJiffy",
+        "description": "A better Giphy"
+    },
+    "host": "microsoft-apiapp99a464b3de8c4c97b5c621043012f834.azurewebsites.net:443",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "basePath": "/api/data",
+    "paths": {
+        "/hi": {
+            "get": {
+                "tags": [
+                    "Diagnostics"
+                ],
+                "operationId": "hi",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    }
+}
