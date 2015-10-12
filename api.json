@@ -34,6 +34,28 @@
                     }
                 },
                 "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "Diagnostics"
+                ],
+                "operationId": "hi",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "deprecated": false
             }
         }
     }

@@ -4,11 +4,14 @@ var baseHost = process.env.WEBSITE_HOSTNAME || 'localhost';
 
 var http = require('http');
 var express = require('express');
+var bodyParser = require('body-parser');
 var swaggerize = require('swaggerize-express');
 
 var app = express();
 
 var server = http.createServer(app);
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(swaggerize({
     api: require('./api.json'),
