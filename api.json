@@ -80,13 +80,6 @@
                         "description": "Slash Command",
                         "required": false,
                         "type": "string"
-                    },
-                    {
-                        "name": "text",
-                        "in": "formData",
-                        "description": "Slash Command Text",
-                        "required": false,
-                        "type": "string"
                     }
                 ],
                 "responses": {
