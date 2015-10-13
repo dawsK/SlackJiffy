@@ -13,30 +13,11 @@
     "basePath": "/api/data",
     "paths": {
         "/hi": {
-            "get": {
-                "tags": [
-                    "Diagnostics"
-                ],
-                "operationId": "hi",
-                "consumes": [],
-                "produces": [
-                    "text/plain; charset=utf-8"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "deprecated": false
-            },
             "post": {
                 "tags": [
                     "Diagnostics"
                 ],
-                "operationId": "hiPost",
+                "operationId": "hi",
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
@@ -45,17 +26,66 @@
                 ],
                 "parameters": [
                     {
-                        "name": "user_name",
-                        "in": "body",
-                        "description": "Slack User Name",
+                        "name": "token",
+                        "in": "formData",
+                        "description": "Slack Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "team_id",
+                        "in": "formData",
+                        "description": "Team Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "team_domain",
+                        "in": "formData",
+                        "description": "Team Domain",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "channel_id",
+                        "in": "formData",
+                        "description": "Channel Id",
                         "required": true,
                         "type": "string"
                     },
                     {
                         "name": "channel_name",
-                        "in": "body",
-                        "description": "Slack Channel Name",
+                        "in": "formData",
+                        "description": "Channel Name",
                         "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "user_name",
+                        "in": "formData",
+                        "description": "Slack User Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "command",
+                        "in": "formData",
+                        "description": "Slash Command",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "text",
+                        "in": "formData",
+                        "description": "Slash Command Text",
+                        "required": false,
                         "type": "string"
                     }
                 ],

@@ -12,7 +12,6 @@ var app = express();
 var server = http.createServer(app);
 
 app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(bodyParser.text());
 
 app.use(swaggerize({
     api: require('./api.json'),
@@ -23,11 +22,12 @@ app.use(swaggerize({
 app.use('/', express.static(__dirname + '/html'));
 
 server.listen(port, 'localhost', function () {
+  var address = server.address();  
   if (baseHost === 'localhost')
   {
-    app.setHost(baseHost + ':' + port);
+    app.swagger.api.host = baseHost + ':' + address.port;
   } else {
-    app.setHost(baseHost);
+    app.swagger.api.host = baseHost;
   }
-    console.log("Server started ..");
+  console.log("Server started ..");
 });

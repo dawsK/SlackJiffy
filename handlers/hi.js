@@ -5,7 +5,6 @@ module.exports = {
         res.send('Hi!');
     },
     post: function (req, res) {
-        //res.send('Hi, ' + req.body.user_name + "! Glad you are hanging out with us on _" + req.body.channel_name + "_.");
-        res.send("request:\r\n" + JSON.stringify(req.body));
+        res.send('Hi, ' + req.body.user_name + "! Glad you are hanging out with us on _" + req.body.channel_name + "_.");        
     }
 };
