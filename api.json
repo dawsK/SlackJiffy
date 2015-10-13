@@ -29,14 +29,14 @@
                         "name": "token",
                         "in": "formData",
                         "description": "Slack Token",
-                        "required": true,
+                        "required": false,
                         "type": "string"
                     },
                     {
                         "name": "team_id",
                         "in": "formData",
                         "description": "Team Id",
-                        "required": true,
+                        "required": false,
                         "type": "string"
                     },
                     {
@@ -50,35 +50,35 @@
                         "name": "channel_id",
                         "in": "formData",
                         "description": "Channel Id",
-                        "required": true,
+                        "required": false,
                         "type": "string"
                     },
                     {
                         "name": "channel_name",
                         "in": "formData",
                         "description": "Channel Name",
-                        "required": true,
+                        "required": false,
                         "type": "string"
                     },
                     {
                         "name": "user_id",
                         "in": "formData",
                         "description": "User Id",
-                        "required": true,
+                        "required": false,
                         "type": "string"
                     },
                     {
                         "name": "user_name",
                         "in": "formData",
                         "description": "Slack User Name",
-                        "required": true,
+                        "required": false,
                         "type": "string"
                     },
                     {
                         "name": "command",
                         "in": "formData",
                         "description": "Slash Command",
-                        "required": true,
+                        "required": false,
                         "type": "string"
                     },
                     {
